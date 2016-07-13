@@ -1,2 +1,2 @@
-# isu-git-demo.github.io
+# ISU Git Demo
 Account static web site
