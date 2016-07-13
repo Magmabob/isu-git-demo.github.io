@@ -33,3 +33,18 @@ $randomBtn.click(function() {
 	$cardImg.attr('src','https://placem.at/places?w=318&h=180&random=1&' + (new Date()).getTime()); 
 
 });
+
+$('#get-map-data').on('click', function() {
+	$.getJSON("http://feeds.illinoisstate.edu/map/api/locations/ou?callback=?")
+		
+		.done(function(data) {
+
+			console.log(data);
+			var html = "<h2>" + data.name + "</h2>";
+			html += "<h6>" + data.address + "</h6>";
+			html += data.longdesc;
+			$('#ajax').html(html);
+
+		});
+
+});
